@@ -781,3 +781,32 @@
   object-fit: contain;
   box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
 }
+
+
+@media (max-width: 700px) {
+  .gomycode-certificate {
+    padding: 90px 6vw;
+  }
+
+  .certificate-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  .certificate-content h3 {
+    font-size: clamp(52px, 16vw, 80px);
+  }
+
+  .certificate-button {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .gomycode-footer {
+    padding: 25px 6vw;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

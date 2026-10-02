@@ -55,34 +55,9 @@ const projects = [
   },
 ];
 
-function useScrollReveal() {
-  useEffect(() => {
-    const elements = document.querySelectorAll('.scroll-reveal');
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-          } else {
-            entry.target.classList.remove('is-visible');
-          }
-        });
-      },
-      {
-        threshold: 0.12,
-        rootMargin: '0px 0px -50px 0px',
-      }
-    );
-
-    elements.forEach((element) => observer.observe(element));
-
-    return () => observer.disconnect();
-  }, []);
-}
 
 function App() {
-  useScrollReveal();
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
@@ -161,7 +136,7 @@ function App() {
       <main>
         {/* WORK */}
         <section id="work" className="section work-section">
-          <div className="section-heading scroll-reveal">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">SELECTED WORK</p>
 
@@ -223,7 +198,7 @@ function App() {
                   </div>
                 </a>
 
-                <div className="project-info scroll-reveal">
+                <div className="project-info">
                   <p className="project-category">{project.category}</p>
 
                   <h3>{project.name}</h3>
@@ -237,7 +212,7 @@ function App() {
               <GomycodeExperience />
         {/* SERVICES */}
         <section id="services" className="section services-section">
-          <div className="section-heading scroll-reveal">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">SERVICES</p>
 
@@ -252,7 +227,7 @@ function App() {
             <div className="service">
               <span>01</span>
 
-              <div className="scroll-reveal">
+              <div>
                 <h3>Web Development</h3>
 
                 <p>
@@ -265,7 +240,7 @@ function App() {
             <div className="service">
               <span>02</span>
 
-              <div className="scroll-reveal">
+              <div>
                 <h3>UI / UX</h3>
 
                 <p>
@@ -278,7 +253,7 @@ function App() {
             <div className="service">
               <span>03</span>
 
-              <div className="scroll-reveal">
+              <div>
                 <h3>E-commerce</h3>
 
                 <p>
@@ -292,7 +267,7 @@ function App() {
 
         {/* ABOUT */}
         <section id="about" className="section about-section">
-          <div className="about-grid scroll-reveal">
+          <div className="about-grid">
             <div>
               <p className="eyebrow">ABOUT</p>
 
@@ -318,7 +293,7 @@ function App() {
 
         {/* CONTACT */}
         <section id="contact" className="section contact-section">
-          <div className="contact-box scroll-reveal">
+          <div className="contact-box">
             <p className="eyebrow">LET'S WORK TOGETHER</p>
 
             <h2>
@@ -367,3 +342,4 @@ function App() {
 }
 
 export default App;
+
