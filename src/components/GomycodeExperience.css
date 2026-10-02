@@ -1,0 +1,783 @@
+/* =========================================================
+   GOMYCODE EXPERIENCE
+   ========================================================= */
+
+.gomycode-experience {
+  position: relative;
+  overflow: hidden;
+  color: #f5f2ea;
+
+  background:
+    radial-gradient(
+      circle at 75% 15%,
+      rgba(119, 48, 255, 0.32),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 55%,
+      rgba(91, 27, 190, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      180deg,
+      #08050d 0%,
+      #160827 32%,
+      #32105d 60%,
+      #12071f 100%
+    );
+}
+
+/* Smooth transition between normal portfolio and GOMYCODE */
+.gomycode-experience::before,
+.gomycode-experience::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 140px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.gomycode-experience::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    #000000 0%,
+    rgba(8, 5, 13, 0.75) 30%,
+    rgba(22, 8, 39, 0) 100%
+  );
+}
+
+.gomycode-experience::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    #000000 0%,
+    rgba(18, 7, 31, 0.75) 30%,
+    rgba(18, 7, 31, 0) 100%
+  );
+}
+
+.gomycode-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================================================
+   SHARED
+   ========================================================= */
+
+.gomycode-section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.gomycode-section-label span:first-child {
+  color: #fff;
+}
+
+.gomycode-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.gomycode-button:hover {
+  transform: translateY(-3px);
+}
+
+.gomycode-button.primary {
+  background: #fff;
+  color: #160824;
+}
+
+.gomycode-button.primary:hover {
+  background: #f3eaff;
+}
+
+.gomycode-button.secondary {
+  color: #fff;
+}
+
+.gomycode-button.secondary:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.gomycode-hero {
+  min-height: 100vh;
+  padding: 42px 7vw 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.gomycode-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.gomycode-brand {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 70px;
+}
+
+.gomycode-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.nvidia-logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-x {
+  font-size: 28px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.gomycode-brand span:nth-child(2) {
+  color: #a86cff;
+  font-size: 20px;
+}
+
+.gomycode-hero h2 {
+  margin: 40px 0 0;
+  max-width: 1100px;
+  font-size: clamp(80px, 14vw, 210px);
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.gomycode-hero h2 span {
+  color: #a968ff;
+}
+
+.gomycode-intro {
+  max-width: 520px;
+  margin: 55px 0 0 auto;
+  font-size: 17px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.gomycode-scroll {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 80px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.scroll-line {
+  width: 90px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================================
+   CAREERMATCH
+   ========================================================= */
+
+.gomycode-project {
+  padding: 150px 7vw;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 8vw;
+  align-items: center;
+}
+
+.career-kicker {
+  margin: 0 0 20px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #c28cff;
+}
+
+.career-copy h3 {
+  margin: 0;
+  font-size: clamp(52px, 6vw, 88px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  white-space: nowrap;
+}
+
+.career-description {
+  max-width: 530px;
+  margin: 35px 0 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.career-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.career-window {
+  min-height: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #0b0810;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.45);
+  transform: rotate(1.2deg);
+}
+
+.window-bar {
+  display: flex;
+  gap: 7px;
+  height: 42px;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.window-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.career-placeholder {
+  min-height: 560px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(121, 50, 255, 0.3),
+      transparent 45%
+    ),
+    #100a19;
+}
+
+.careermatch-screenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: top center;
+
+  border-radius: 6px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+
+  transition: transform 0.5s ease;
+}
+
+.career-window:hover .careermatch-screenshot {
+  transform: scale(1.02);
+}
+
+.career-window:hover .careermatch-screenshot {
+  transform: scale(1.025);
+}
+
+/* =========================================================
+   THE BUILD
+   ========================================================= */
+
+.gomycode-build {
+  padding: 150px 7vw;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.build-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.build-grid > div {
+  min-height: 300px;
+  padding: 30px;
+  background: rgba(28, 10, 49, 0.88);
+}
+
+.build-number {
+  font-size: 11px;
+  color: #b477ff;
+}
+
+.build-grid h4 {
+  margin: 80px 0 20px;
+  font-size: 24px;
+  letter-spacing: -0.03em;
+}
+
+.build-grid p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+/* =========================================================
+   EVENT
+   ========================================================= */
+
+.gomycode-event {
+  padding: 150px 7vw;
+}
+
+.event-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 20px;
+}
+
+.event-main-card,
+.event-small-card {
+  position: relative;
+  overflow: hidden;
+  background: #080609;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+
+.hackerspace-card {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.hackerspace-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.hackerspace-card:hover img {
+  transform: scale(1.04);
+}
+
+.event-card-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 6, 12, 0.25) 0%,
+      rgba(8, 6, 12, 0.45) 45%,
+      rgba(8, 6, 12, 0.9) 100%
+    );
+}
+
+.event-card-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  min-height: 270px;
+  padding: 22px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-card-content span {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.event-card-content strong {
+  font-size: 35px;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+.event-main-card {
+  min-height: 560px;
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 80% 25%, rgba(145, 57, 255, 0.55), transparent 35%),
+    linear-gradient(135deg, #09070c, #2a0b45);
+}
+
+.event-main-card span,
+.event-small-card span {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.event-main-card strong {
+  font-size: clamp(55px, 8vw, 120px);
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.event-main-card small {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.event-side {
+  display: grid;
+  gap: 20px;
+}
+
+.event-small-card {
+  min-height: 270px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.event-small-card strong {
+  font-size: 35px;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.event-small-card.orange {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255, 105, 30, 0.4), transparent 40%),
+    #17100c;
+}
+
+/* =========================================================
+   CERTIFICATE
+   ========================================================= */
+
+.gomycode-certificate {
+  padding: 150px 7vw;
+  background: #0a0610;
+}
+
+.certificate-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+}
+
+.certificate-content h3 {
+  margin: 0;
+  font-size: clamp(60px, 9vw, 130px);
+  line-height: 0.82;
+  letter-spacing: -0.065em;
+}
+
+.certificate-content h3 span {
+  color: #a968ff;
+}
+
+.certificate-button {
+  min-width: 210px;
+  min-height: 55px;
+  padding: 0 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.certificate-button:hover {
+  background: white;
+  color: #13091e;
+  transform: translateY(-3px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.gomycode-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 7vw;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =========================================================
+   CERTIFICATE MODAL
+   ========================================================= */
+
+.certificate-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.certificate-modal-content {
+  position: relative;
+  width: min(900px, 100%);
+  min-height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f2ea;
+  color: #151018;
+  box-shadow: 0 40px 120px rgba(0, 0, 0, 0.6);
+}
+
+.certificate-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
+  border: 0;
+  background: transparent;
+  color: #151018;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.certificate-placeholder {
+  text-align: center;
+}
+
+.certificate-placeholder p {
+  margin: 0;
+  font-size: 45px;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+}
+
+.certificate-placeholder span {
+  display: block;
+  margin-top: 15px;
+  color: rgba(21, 16, 24, 0.55);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .career-grid,
+  .event-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .build-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .career-window {
+  min-height: 600px;
+  }
+
+  .certificate-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .gomycode-hero,
+  .gomycode-project,
+  .gomycode-build,
+  .gomycode-event,
+  .gomycode-certificate {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .gomycode-meta {
+    flex-wrap: wrap;
+  }
+
+  .gomycode-hero h2 {
+    font-size: clamp(58px, 18vw, 110px);
+  }
+
+  .gomycode-intro {
+    margin-left: 0;
+  }
+
+  .build-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .build-grid > div {
+    min-height: 240px;
+  }
+
+  .event-main-card {
+    min-height: 430px;
+  }
+
+  .event-main-card strong {
+    font-size: 58px;
+  }
+
+  .gomycode-footer {
+    flex-direction: column;
+    gap: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .certificate-modal {
+    padding: 15px;
+  }
+
+  .certificate-modal-content {
+    min-height: 500px;
+  }
+}
+
+
+.event-gomycode-logo {
+  width: 145px;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* =========================================================
+   CERTIFICATE PREVIEW
+   ========================================================= */
+
+.certificate-heading {
+  flex: 1;
+}
+
+.certificate-preview-wrapper {
+  width: min(420px, 42%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 18px;
+}
+
+.certificate-preview {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #151018;
+  cursor: pointer;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+.certificate-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.45s ease;
+}
+
+.certificate-preview:hover img {
+  transform: scale(1.025);
+}
+
+.certificate-preview-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 6, 16, 0.55);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.certificate-preview:hover .certificate-preview-overlay {
+  opacity: 1;
+}
+
+.certificate-preview-overlay span {
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+}
+
+.certificate-preview-wrapper .certificate-button {
+  align-self: flex-end;
+}
+
+.certificate-large {
+  display: block;
+  width: auto;
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, 0.6);
+}

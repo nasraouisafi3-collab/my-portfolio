@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import GomycodeExperience from './components/GomycodeExperience';
 
 const projects = [
   {
@@ -233,7 +234,7 @@ function App() {
             ))}
           </div>
         </section>
-
+              <GomycodeExperience />
         {/* SERVICES */}
         <section id="services" className="section services-section">
           <div className="section-heading scroll-reveal">
