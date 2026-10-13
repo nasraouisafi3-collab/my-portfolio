@@ -76,7 +76,7 @@ function App() {
       <header className="hero">
         <nav className="navbar reveal reveal-delay-1">
           <a href="/" className="logo">
-            SAFI<span>.</span>
+            SAFI NASRAOUI<span>.</span>
           </a>
 
           <div className="nav-links">
@@ -335,8 +335,12 @@ function App() {
                 </a>
             </div>
           </div>
-        </section>
+               </section>
       </main>
+
+      <footer className="site-footer">
+        <p>© {new Date().getFullYear()} Safi Nasraoui</p>
+      </footer>
     </div>
   );
 }

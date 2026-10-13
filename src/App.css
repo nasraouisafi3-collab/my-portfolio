@@ -631,3 +631,20 @@
     transition: none !important;
   }
 }
+
+
+
+.site-footer {
+  width: min(1400px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 28px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+  letter-spacing: 0.3px;
+}
